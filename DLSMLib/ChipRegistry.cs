@@ -1,8 +1,7 @@
 ﻿using DLS.Description;
 using DLS.Simulation;
-using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace DLSMLib.Chips
@@ -48,7 +47,7 @@ namespace DLSMLib.Chips
 
             var chip = ChipBuilder.CreateChipData(20, 20, color, nameLocation, inputs, outputs);
             chip.Name = name;
-            
+
             registeredChips[chip] = new ModdedChipIdentity
             {
                 Name = name,

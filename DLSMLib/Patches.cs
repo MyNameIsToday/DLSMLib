@@ -1,14 +1,9 @@
 ﻿using DLS.Description;
 using DLS.Game;
-using DLS.Graphics;
 using DLS.Simulation;
 using DLSMLib.Chips;
 using HarmonyLib;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
-using Seb.Types;
-using Seb.Vis;
-using Seb.Vis.UI;
-using UnityEngine;
 
 namespace DLSMLib.Patches
 {
@@ -75,5 +70,20 @@ namespace DLSMLib.Patches
 
             return true;
         }
+
+
+        //Mods Menu Patches
+        /**[HarmonyPostfix]
+        [HarmonyPatch(typeof(MainMenu), "DrawMainScreen")]
+        public static void DrawMainScreen()
+        {
+            int buttonIndex = UI.VerticalButtonGroup(new string[] { "Mods" }, DrawSettings.ActiveUITheme.MainMenuButtonTheme, 
+                UI.Centre + Vector2.down * 12.7f, new Vector2(15, 0), false, true, 1);
+
+            if(buttonIndex == 0)
+            {
+                //Mod Menu
+            }
+        }*/
     }
 }

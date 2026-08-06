@@ -1,7 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using BepInEx.Unity.IL2CPP;
-using DLS.Description;
+using BepInEx.Unity.IL2CPP; 
 using DLS.Simulation;
 using DLSMLib.Chips;
 using HarmonyLib;
@@ -21,6 +20,7 @@ namespace DLSMLib
 
         public override void Load()
         {
+            //Patching and checking for Community Edit.
             var harmony = new Harmony("net.pervalliax.dlsm_lib");
             Logging = Log;
 
@@ -32,7 +32,7 @@ namespace DLSMLib
 
                 if (targetMethod != null)
                 {
-                    Log.LogInfo("DLSMLib has detected the Community Edit!");
+                    Log.LogInfo("DLSMLib has detected the Community Edit!"); 
                     IsCommunityVersion = true;
                 }
                 else
@@ -48,38 +48,6 @@ namespace DLSMLib
             }
 
             harmony.PatchAll();
-
-
-
-            ChipRegistry.AddChip(
-                "NEW CHIP TEST",
-                "new_chip_test",
-                Color.white,
-                new ModdedPinIdentity[]
-                {
-                    Pins.AddPin("IN TEST", 0, PinType.Input, 1),
-
-                    Pins.AddPin("IN TEST", 1, PinType.Input, 8),
-                    Pins.AddPin("IN TEST", 2, PinType.Input, 8),
-
-                    Pins.AddPin("OUT TEST", 3, PinType.Output, 8)
-                },
-                chip =>
-                {
-                    var value = new PinStateValue();
-
-                    if (chip.InputPins[0].FirstBitHigh)
-                    {
-                        chip.OutputPins[0].State = chip.InputPins[1].State;
-                    }
-                    else
-                    {
-                        chip.OutputPins[0].State = chip.InputPins[2].State;
-                    }
-                }
-            );
-
-
 
             Log.LogInfo("Loaded DLSMLib!");
         }

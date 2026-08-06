@@ -25,9 +25,9 @@ namespace DLSMLib.Chips
             var Outputs = outputs?.Select(x => x.desc).ToArray();
 
             if (inputs == null)
-                Inputs = new PinDescription[] {BuiltinChipCreator.CreatePinDescription("IN", 0)};
+                Inputs = new PinDescription[] { BuiltinChipCreator.CreatePinDescription("IN", 0) };
 
-            if(outputs == null)
+            if (outputs == null)
                 Outputs = new PinDescription[] { BuiltinChipCreator.CreatePinDescription("OUT", 1) };
 
             return BuiltinChipCreator.CreateBuiltinChipDescription(
