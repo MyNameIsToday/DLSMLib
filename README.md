@@ -1,8 +1,10 @@
 # DLSMLib
 
-DLSMLib(Digital Logic Sim Modding Library) is a currently in-progress tool for making BepnInEx mods for Digital Logic Sim and Digital Logic Sim: Community Edition.
+DLSMLib(Digital Logic Sim Modding Library) is a currently in-progress library for making BepnInEx mods for Digital Logic Sim and Digital Logic Sim: Community Edition. (It works on both!)
 
-The project currently includes a method to add new chips, and some more convenient methods for pin creation.
+The project currently includes a method to add new chips, and some more convenient methods for pin creation and state modification.
+
+⚠️ DLSMLib required Bleeding Edge builds of BepInEx
 
 
 
@@ -55,3 +57,11 @@ ChipRegistry.AddChip(
 ```
 
 And a chip should be created!
+
+
+## Bugs
+When removing a chip or changing the name of one, the old version of the chip will still show up in the library.
+Pin state changes can be stubborn sometimes.
+
+
+Shhhh.... I forgot to remove the hard-coded chip size!
