@@ -12,7 +12,7 @@ using UnityEngine;
 [assembly: InternalsVisibleTo("DLSMLib.Chips")]
 namespace DLSMLib
 {
-    [BepInPlugin("net.pervalliax.dlsm_lib", "DLSMLib", "0.0.0")]
+    [BepInPlugin("net.pervalliax.dlsm_lib", "DLSMLib", "0.1.0")]
     public class Main : BasePlugin
     {
         public static ManualLogSource Logging;
