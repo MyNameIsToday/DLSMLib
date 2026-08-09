@@ -4,18 +4,23 @@ DLSMLib(Digital Logic Sim Modding Library) is a currently in-progress library fo
 
 The project currently includes a method to add new chips, and some more convenient methods for pin creation and state modification.
 
-⚠️ DLSMLib required Bleeding Edge builds of BepInEx
+### ⚠️ DLSMLib required Bleeding Edge builds of BepInEx
 
+<br>
 
+If you'd like to make a pull request, **push it towards the dev branch** rather than main.
+
+<br>
+<br>
 
 ### Planned Features:
--Helper methods for adding display chips.
+- Helper methods for adding display chips.
 
--UI helper methods.
+- UI helper methods.
 
--Better access to systems such as wire drawing.
+- Better access to systems such as wire drawing.
 
--Adding chips to collections
+- Adding chips to collections
 
 
 ## Creating A Chip
@@ -60,8 +65,8 @@ And a chip should be created!
 
 
 ## Bugs
-When removing a chip or changing the name of one, the old version of the chip will still show up in the library.
-Pin state changes can be stubborn sometimes.
+- When removing a chip or changing the name of one, the old version of the chip will still show up in the library. <br>
+- Pin state changes can be stubborn sometimes.
 
 
-Shhhh.... I forgot to remove the hard-coded chip size!
+###### Shhhh.... I forgot to remove the hard-coded chip size!
