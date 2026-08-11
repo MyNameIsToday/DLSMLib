@@ -4,7 +4,7 @@ DLSMLib(Digital Logic Sim Modding Library) is a currently in-progress library fo
 
 The project currently includes a method to add new chips, and some more convenient methods for pin creation and state modification.
 
-### ⚠️ DLSMLib required Bleeding Edge builds of BepInEx
+### ⚠️ DLSMLib requires Bleeding Edge builds of BepInEx (Il2Cpp)
 
 <br>
 
