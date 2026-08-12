@@ -1,6 +1,6 @@
 # DLSMLib
 
-DLSMLib(Digital Logic Sim Modding Library) is a currently in-progress library for making BepnInEx mods for Digital Logic Sim and Digital Logic Sim: Community Edition. (It works on both!)
+DLSMLib(Digital Logic Sim Modding Library) is a currently in-progress library for making BepnInEx mods for Digital Logic Sim and Digital Logic Sim: Community Edition. (as of CE v1.2.1)
 
 The project currently includes a method to add new chips, and some more convenient methods for pin creation and state modification.
 
